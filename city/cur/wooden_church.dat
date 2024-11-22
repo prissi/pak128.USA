@@ -1,0 +1,11 @@
+Obj=building
+Name=WOODEN_CHURCH
+Copyright=MHz & mEGa
+Type=cur
+Build_Time=200
+chance=30
+Passengers=25
+intro_year=1820
+climates=desert,temperate,tundra,rocky,arctic
+BackImage[0][0][0][0][0][0]=wooden_church.1.0
+BackImage[0][0][0][0][0][1]=wooden_church.1.1

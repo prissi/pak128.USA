@@ -1,0 +1,13 @@
+Obj=building
+Name=CHURCH_02
+copyright=MHz & mEGa
+Type=cur
+Build_Time=450
+Chance=50
+Passengers=80
+Dims=1,1
+intro_year=1910
+climates=temperate,tundra,rocky
+climates=temperate,tundra,rocky
+BackImage[0][0][0][0][0][0]=church_02.1.0
+BackImage[0][0][0][0][0][1]=church_02.1.1
