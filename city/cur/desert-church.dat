@@ -8,5 +8,5 @@ Passengers=25
 intro_year=1820
 retire_year=1910
 climates=mediterran,desert,tropic,temperate
-BackImage[0][0][0][0][0][0]=desert-church.1.0
+BackImage[0][0][0][0][0][0]=desert-church.0.0
 
