@@ -23,11 +23,11 @@ backimage[0][0][0][0][0]=desert-blacksmith.0.0
 --
 #watertower
 obj=building
-name=IND_20_8
+name=IND_20_08
 copyright=AI & prissi
 type=ind
 level=8
-intro_year=1875
+intro_year=1830
 retire_year=1910
 climates=tropic,desert,mediterran,temperate
 backimage[0][0][0][0][0]=desert-watertower.0.0
