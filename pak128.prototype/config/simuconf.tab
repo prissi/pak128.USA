@@ -89,7 +89,7 @@ intercity_road[3] = Road_030,0,1700
 # Cityroad with timeline: city_road[number]=name,intro-year,retire-year
 # .. number = 0..9 - up to ten different city_roads possible
 # .. name = name of an existing pak file
-city_road[0] = Road_030,0,1910
+city_road[0] = CityRoad_030,0,1910
 city_road[1] = Road_055,1910,2999
 
 # way builder internal weights (straight track is 4)
