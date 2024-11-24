@@ -37,8 +37,8 @@ jobs:
           rm -rf simutrans
 
     - name: compile pakset
-      run: |
 #        ./text_import.sh
+      run: |
         make
         mv simupak128.USA.zip simupak128.USA-nightly.zip
 
