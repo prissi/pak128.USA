@@ -30,8 +30,8 @@ level=8
 intro_year=1830
 retire_year=1910
 climates=tropic,desert,mediterran,temperate
-backimage[0][0][0][0][0]=desert-watertower.0.0
-backimage[0][0][0][1][0]=desert-watertower.1.0
+backimage[0][0][0][1][0]=desert-watertower.0.0
+backimage[0][0][0][0][0]=desert-watertower.1.0
 ----
 #mill
 obj=building
@@ -39,7 +39,7 @@ name=IND_20_12
 copyright=AI & prissi
 type=ind
 level=12
-intro_year=1875
+intro_year=1830
 retire_year=1910
 climates=tropic,desert,mediterran,temperate
 backimage[0][0][0][0][0]=desert-mill.0.0

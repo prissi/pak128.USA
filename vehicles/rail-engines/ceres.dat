@@ -1,3 +1,4 @@
+--
 obj=vehicle
 name=Ceres
 waytype=track
@@ -13,8 +14,9 @@ Power=199
 Gear=100
 intro_year=1855
 intro_month=1
-retire_year=1891
-retire_month=5
+# never retire until there are more engines ...
+#retire_year=1891
+#retire_month=5
 Smoke=Steam
 sound=train-horn-steam-1.wav
 Constraint[Prev][0]=None
@@ -38,8 +40,8 @@ weight=12
 RunningCost=2
 intro_year=1855
 intro_month=1
-retire_year=1891
-retire_month=5
+#retire_year=1891
+#retire_month=5
 copyright=Shige Meitetsu Vehicle Manufacturing
 Constraint[Prev][0]=Ceres
 EmptyImage[S]=ceres.0.0,0,2
