@@ -2,6 +2,7 @@ obj=building
 name=IND_06_27
 copyright=Shunter
 type=ind
+climates=tropic,desert,mediterran,temperate,tundra,rocky
 level=27
 intro_year=1920
 #retire_year=?
