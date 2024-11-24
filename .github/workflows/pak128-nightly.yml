@@ -1,0 +1,65 @@
+name: Nightly build Ubuntu
+
+on: [push]
+
+jobs:
+
+  compile_pak128-nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: install_dependencies
+#         sudo apt-get -y update
+      run: |
+          sudo apt-get -ym install libpng-dev
+          sudo apt-get -ym install libsdl2-dev
+          sudo apt-get -ym install libbz2-dev
+          sudo apt-get -ym install autoconf
+          svn checkout svn://servers.simutrans.org/simutrans simutrans
+
+    - name: setup
+      run: |
+        cd simutrans/trunk
+        autoconf
+        ./configure
+        cat config.default >>/dev/stderr
+
+    - name: make makeobj
+      run: |
+          cd simutrans/trunk/src/makeobj
+          make
+          mv makeobj ../../../..
+          cd ../../../..
+          rm -rf simutrans
+
+    - name: compile pakset
+      run: |
+#        ./text_import.sh
+        make
+        mv simupak128.USA.zip simupak128.USA-nightly.zip
+
+    - name: set environment
+      run: |
+        echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+
+    - name: set current head to nightly
+      uses: richardsimko/update-tag@v1
+      with:
+          tag_name: Nightly
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update Serverset of Nightly Release
+      uses: meeDamian/github-release@2.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: Nightly
+        files: simupak128.USA-nightly.zip
+        name: Nightly ${{ env.date }}
+        allow_override: true
+        gzip: false
+ 
